@@ -160,11 +160,11 @@ In order to flash via serial, the NRST pin of the STM8 needs to be grounded upon
 
 IO0 from the TYWE3s also needs to be grounded upon boot, otherwise it's normal tasmota flashing procedure.
 
-Header pins from left to right
-*VCC
-*Unknown
+Header J3 (STM8 debug interface) pins from left to right (pin 1 is the square shaped pin)
+*VCC 3,3V
+*STM8 SWIM (Pin 18)
 *Ground
-*STM8 NRST
+*STM8 NRST (Pin 4)
 
 ![Header](https://user-images.githubusercontent.com/29167124/66513019-1d78d280-ead2-11e9-8a6e-d33e82b60154.png)
 
@@ -180,7 +180,7 @@ As per main TuyaMCU page using
    01 | Tuya Rx (108)
    03 | Tuya Tx (107)
 
-Note that the push button is wired to the MCU so it cannot be used by Tasmota. Similarlly the devices has a bi-color LED where one color is wired to the TYWE3S and the other one to the MCU.
+Note that the push button is wired to the MCU (Pin 10 PA3) so it cannot be used by Tasmota. Similary the devices has a bi-color LED where one color (green) is wired to the TYWE3S (GPIO14) and the other one (red) to the MCU (Pin 15 PC5).
 
 ### More information:
 Bought from [ebay](https://www.ebay.co.uk/itm/Smart-Wifi-Dimmer-Switch-Support-Tuya-Smart-Life-LED-Light-Timing-Remote-Control/233233166207)
